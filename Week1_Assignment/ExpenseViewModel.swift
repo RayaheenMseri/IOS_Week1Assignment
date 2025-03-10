@@ -41,6 +41,13 @@ class ExpenseViewModel: ObservableObject {
             }
         
     }
+// add currency
+        func formattedCurrency(_ amount: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.currencyCode = "USD"
+        return numberFormatter.string(from: NSNumber(value: amount)) ?? ""
+    }
 
 
 }
