@@ -42,7 +42,7 @@ struct ContentView: View {
                             .frame(width: 100, alignment: .leading)
                             .padding(.leading, 5)
                             .foregroundColor(isDarkMode ? .white : .black)
-                        Text("\(expense.amount)")
+                        Text("\(viewModel.formattedCurrency(expense.amount))")
                             .frame(width: 100, alignment: .center)
                             .foregroundColor(isDarkMode ? .white : .black)
                         Text("\(expense.category)")
