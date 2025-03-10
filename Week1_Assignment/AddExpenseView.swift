@@ -39,7 +39,7 @@ struct AddExpenseView: View {
             HStack {
                 Text("Amount: ")
                 Spacer()
-                Text("\(amount)") // Displays current amount
+                Text("\(viewModel.formattedCurrency(amount))") // Displays current amount
                 Stepper("", value: $amount, in: 1...1000) // Allows incrementing/decrementing the amount
             }
             .foregroundColor(isDarkMode ? .white : .black)
